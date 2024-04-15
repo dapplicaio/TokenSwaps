@@ -1,0 +1,241 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.2",
+    "types": [],
+    "structs": [
+        {
+            "name": "addblend",
+            "base": "",
+            "fields": [
+                {
+                    "name": "blend_components",
+                    "type": "int32[]"
+                },
+                {
+                    "name": "resulting_item",
+                    "type": "int32"
+                }
+            ]
+        },
+        {
+            "name": "blends_j",
+            "base": "",
+            "fields": [
+                {
+                    "name": "blend_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "blend_components",
+                    "type": "int32[]"
+                },
+                {
+                    "name": "resulting_item",
+                    "type": "int32"
+                }
+            ]
+        },
+        {
+            "name": "claim",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "farmingitem",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "resourcecost_j",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "resource_name",
+                    "type": "string"
+                },
+                {
+                    "name": "ratio",
+                    "type": "float32"
+                }
+            ]
+        },
+        {
+            "name": "resources_j",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "amount",
+                    "type": "float32"
+                },
+                {
+                    "name": "resource_name",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "setratio",
+            "base": "",
+            "fields": [
+                {
+                    "name": "resource",
+                    "type": "string"
+                },
+                {
+                    "name": "ratio",
+                    "type": "float32"
+                }
+            ]
+        },
+        {
+            "name": "staked_j",
+            "base": "",
+            "fields": [
+                {
+                    "name": "asset_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "staked_items",
+                    "type": "uint64[]"
+                }
+            ]
+        },
+        {
+            "name": "swap",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "resource",
+                    "type": "string"
+                },
+                {
+                    "name": "amount2swap",
+                    "type": "float32"
+                }
+            ]
+        },
+        {
+            "name": "upgfarmitem",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "farmingitem_to_upgrade",
+                    "type": "uint64"
+                },
+                {
+                    "name": "staked",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "upgradeitem",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "item_to_upgrade",
+                    "type": "uint64"
+                },
+                {
+                    "name": "next_level",
+                    "type": "uint8"
+                },
+                {
+                    "name": "staked_at_farmingitem",
+                    "type": "uint64"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "addblend",
+            "type": "addblend",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "claim",
+            "type": "claim",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setratio",
+            "type": "setratio",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "swap",
+            "type": "swap",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "upgfarmitem",
+            "type": "upgfarmitem",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "upgradeitem",
+            "type": "upgradeitem",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "blends",
+            "type": "blends_j",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "resourcecost",
+            "type": "resourcecost_j",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "resources",
+            "type": "resources_j",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "staked",
+            "type": "staked_j",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "kv_tables": {},
+    "ricardian_clauses": [],
+    "variants": [],
+    "action_results": []
+}
